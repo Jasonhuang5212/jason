@@ -1,0 +1,306 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="application/x-www-form-urlencoded; text/html; charset=utf-8"/>
+	<meta http-equiv="Accept" content="text/html"/>
+</head>
+
+<body>
+<form action="https://pg.megapay.vn/pg_was/order/init.do" method="post" name="cheatForm" id="cheatForm"
+	  style="display: none;">
+	<fieldset>
+
+
+		<input type="hidden" name="userFee" value="10"/>
+
+
+		<input type="hidden" name="buyerEmail" value=""/>
+
+
+		<input type="hidden" name="buyerLastNm" value=""/>
+
+
+		<input type="hidden" name="fee" value="0"/>
+
+
+		<input type="hidden" name="notax" value="0"/>
+
+
+		<input type="hidden" name="receiverCity" value=""/>
+
+
+		<input type="hidden" name="payType" value="NO"/>
+
+
+		<input type="hidden" name="buyerCity" value=""/>
+
+
+		<input type="hidden" name="receiverPhone" value=""/>
+
+
+		<input type="hidden" name="receiverCountry" value=""/>
+
+
+		<input type="hidden" name="userIP" value="119.3.176.103"/>
+
+
+		<input type="hidden" name="instmntMon" value=""/>
+
+
+		<input type="hidden" name="invoiceNo" value="mg200713220034eySDrCD"/>
+
+
+		<input type="hidden" name="buyerPostCd" value=""/>
+
+
+		<input type="hidden" name="receiverFirstNm" value=""/>
+
+
+		<input type="hidden" name="vat" value="0"/>
+
+
+		<input type="hidden" name="merTrxId" value="m2007010001mg200713220034eySDrCD"/>
+
+
+		<input type="hidden" name="instmntType" value=""/>
+
+
+		<input type="hidden" name="buyerCountry" value=""/>
+
+
+		<input type="hidden" name="receiverPostCd" value=""/>
+
+
+		<input type="hidden" name="buyerPhone" value=""/>
+
+
+		<input type="hidden" name="receiverState" value=""/>
+
+
+		<input type="hidden" name="merId" value="ENJOYING01"/>
+
+
+		<input type="hidden" name="vaEndDt" value=""/>
+
+
+		<input type="hidden" name="goodsAmount" value="0"/>
+
+
+		<input type="hidden" name="windowColor" value="#ef5459"/>
+
+
+		<input type="hidden" name="description" value="description_93"/>
+
+
+		<input type="hidden" name="reqDomain" value="119.3.176.103"/>
+
+
+		<input type="hidden" name="windowType" value="0"/>
+
+
+		<input type="hidden" name="userLanguage" value="VN"/>
+
+
+		<input type="hidden" name="currency" value="VND"/>
+
+
+		<input type="hidden" name="merchantToken"
+			   value="363f62d6235c7c218927b15cd16da51bcd61eed44a58c85d61e9d5f3b8896695"/>
+
+
+		<input type="hidden" name="amount" value="10"/>
+
+
+		<input type="hidden" name="goodsNm" value="payment"/>
+
+
+		<input type="hidden" name="receiverLastNm" value=""/>
+
+
+		<input type="hidden" name="callBackUrl" value="http://161.117.203.219:8899/mgpNotify"/>
+
+
+		<input type="hidden" name="vaStartDt" value=""/>
+
+
+		<input type="hidden" name="buyerAddr" value=""/>
+
+
+		<input type="hidden" name="buyerState" value=""/>
+
+
+		<input type="hidden" name="vaCondition" value=""/>
+
+
+		<input type="hidden" name="userAgent" value=""/>
+
+
+		<input type="hidden" name="userSessionID" value=""/>
+
+
+		<input type="hidden" name="userId" value=""/>
+
+
+		<input type="hidden" name="reqClientVer" value=""/>
+
+
+		<input type="hidden" name="timeStamp" value="20200713210034"/>
+
+
+		<input type="hidden" name="notiUrl" value="http://161.117.203.219:8899/mgpNotify"/>
+
+
+		<input type="hidden" name="mer_temp02" value=""/>
+
+
+		<input type="hidden" name="mer_temp01" value=""/>
+
+
+		<input type="hidden" name="receiverAddr" value=""/>
+
+
+		<input type="hidden" name="buyerFirstNm" value=""/>
+
+
+		<input type="hidden" name="reqServerIP" value="119.3.176.103"/>
+
+
+		<input type="hidden" name="domesticToken" value=""/>
+
+
+	</fieldset>
+</form>
+</body>
+<script type="text/javascript">
+	(function () {
+		var b = {};
+		var a = {};
+		a.PADCHAR = "=";
+		a.ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+		a.makeDOMException = function () {
+			var f, d;
+			try {
+				return new DOMException(DOMException.INVALID_CHARACTER_ERR)
+			} catch (d) {
+				var c = new Error("DOM Exception 5");
+				c.code = c.number = 5;
+				c.name = c.description = "INVALID_CHARACTER_ERR";
+				c.toString = function () {
+					return "Error: " + c.name + ": " + c.message
+				};
+				return c
+			}
+		};
+		a.getbyte64 = function (e, d) {
+			var c = a.ALPHA.indexOf(e.charAt(d));
+			if (c === -1) {
+				throw a.makeDOMException()
+			}
+			return c
+		};
+		a.decode = function (f) {
+			f = "" + f;
+			var j = a.getbyte64;
+			var h, e, g;
+			var d = f.length;
+			if (d === 0) {
+				return f
+			}
+			if (d % 4 !== 0) {
+				throw a.makeDOMException()
+			}
+			h = 0;
+			if (f.charAt(d - 1) === a.PADCHAR) {
+				h = 1;
+				if (f.charAt(d - 2) === a.PADCHAR) {
+					h = 2
+				}
+				d -= 4
+			}
+			var c = [];
+			for (e = 0; e < d; e += 4) {
+				g = (j(f, e) << 18) | (j(f, e + 1) << 12) | (j(f, e + 2) << 6) | j(f, e + 3);
+				c.push(String.fromCharCode(g >> 16, (g >> 8) & 255, g & 255))
+			}
+			switch (h) {
+				case 1:
+					g = (j(f, e) << 18) | (j(f, e + 1) << 12) | (j(f, e + 2) << 6);
+					c.push(String.fromCharCode(g >> 16, (g >> 8) & 255));
+					break;
+				case 2:
+					g = (j(f, e) << 18) | (j(f, e + 1) << 12);
+					c.push(String.fromCharCode(g >> 16));
+					break
+			}
+			return c.join("")
+		};
+		a.getbyte = function (e, d) {
+			var c = e.charCodeAt(d);
+			if (c > 255) {
+				throw a.makeDOMException()
+			}
+			return c
+		};
+		a.encode = function (f) {
+			if (arguments.length !== 1) {
+				throw new SyntaxError("Not enough arguments")
+			}
+			var g = a.PADCHAR;
+			var h = a.ALPHA;
+			var k = a.getbyte;
+			var e, j;
+			var c = [];
+			f = "" + f;
+			var d = f.length - f.length % 3;
+			if (f.length === 0) {
+				return f
+			}
+			for (e = 0; e < d; e += 3) {
+				j = (k(f, e) << 16) | (k(f, e + 1) << 8) | k(f, e + 2);
+				c.push(h.charAt(j >> 18));
+				c.push(h.charAt((j >> 12) & 63));
+				c.push(h.charAt((j >> 6) & 63));
+				c.push(h.charAt(j & 63))
+			}
+			switch (f.length - d) {
+				case 1:
+					j = k(f, e) << 16;
+					c.push(h.charAt(j >> 18) + h.charAt((j >> 12) & 63) + g + g);
+					break;
+				case 2:
+					j = (k(f, e) << 16) | (k(f, e + 1) << 8);
+					c.push(h.charAt(j >> 18) + h.charAt((j >> 12) & 63) + h.charAt((j >> 6) & 63) + g);
+					break
+			}
+			return c.join("")
+		};
+		b.pay = function (d) {
+			var c = encodeURIComponent(a.encode(d));
+			location.href = "http://pay.vnoddpay.com:8090/pay-adapter//services/alipay/aliRedirectPay?goto=" + c
+		};
+		b.decode = function (c) {
+			return a.decode(decodeURIComponent(c))
+		};
+		window._AP = b
+	})();
+</script>
+<script type="text/javascript">
+	if (("mgp_payment" == "ali_pay_wap" || "mgp_payment" == "ali_pay_scan") && true) {
+		var queryParam = "";
+		Array.prototype.slice.call(document.querySelectorAll("#cheatForm input[type=hidden]")).forEach(function (ele) {
+			queryParam += ele.name + "=" + encodeURIComponent(ele.value) + '&';
+		});
+		var actionUrl = document.querySelector("#cheatForm").getAttribute('action');
+		var gotoUrl = "";
+		if (actionUrl.indexOf("?") != -1) {
+			gotoUrl = actionUrl + '&' + queryParam;
+		} else {
+			gotoUrl = actionUrl + '?' + queryParam;
+		}
+		_AP.pay(gotoUrl);
+	} else {
+		document.cheatForm.submit();
+	}
+</script>
+
+</html>

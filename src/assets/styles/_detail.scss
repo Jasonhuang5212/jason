@@ -1,0 +1,81 @@
+
+.detail-card-box{
+  margin: 8PX;
+  padding-bottom: 8PX;
+  border-radius: 8PX;
+  background: $primary;
+  @include box-shadow;
+}
+
+.product-preview-item{
+  font-size: 16PX;
+  padding: 16PX 8PX;
+  color: #fff;
+  .van-image{
+    margin-right: 16PX;
+  }
+  .desc{
+    font-size: 12PX;
+    margin-top: 8PX;
+  }
+
+}
+
+.product-detail-card{
+  text-align: center;
+  font-size: 12PX;
+  margin: 0 8PX;
+  background: #fff;
+  border-radius: 8PX;
+
+  .card-item{
+    padding: 28px 0;
+    .van-icon{
+      font-size: 54px;
+      color: $primary;
+    }
+    .title{
+      font-size: 14PX;
+    }
+    .desc{
+      color: #999;
+    }
+  }
+}
+
+.term-card{
+  border-radius: 8PX;
+  background: #fff;
+  margin: 0 8PX;
+  @include box-shadow;
+}
+.term-item{
+  font-size: 14PX;
+  padding: 8PX;
+  .term-label {
+    display: block;
+    width: 300px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #999;
+  }
+  &.bottom-line{
+    &::before{
+      left: 150px;
+    }
+  }
+
+}
+.apply-process-card{
+  border-radius: 8PX;
+  background: #fff;
+  margin: 0 8PX;
+  overflow: hidden;
+  @include box-shadow;
+}
+.apply-process-item{
+  img{
+    width: 100%;
+    display: block;
+  }
+}

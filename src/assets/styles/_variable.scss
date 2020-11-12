@@ -1,0 +1,131 @@
+@charset "UTF-8";
+// REM 基准字号
+$base-font-size: 75;
+
+/*-----750设计稿-----*/
+/**
+* 应用此函数将设计稿标注的尺寸(px)转化为(rem)
+* 默认750设计稿
+*/
+@function px2rem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+
+/*-----375设计稿-----*/
+@function px2rem_375($size) {
+  $remSize: $size / 37.5;
+  @return $remSize * 1rem;
+}
+/*-----1080设计稿-----*/
+@function px2rem_1080($size) {
+  $remSize: $size / 108;
+  @return $remSize * 1rem;
+}
+
+/*字体也是默认为750设计稿上的大小*/
+@mixin font-size($size) {
+  font-size: round($size / 2) * 1px;
+  [data-dpr="2"] & {
+    font-size: $size * 1px;
+  }
+  [data-dpr="2.5"] & {
+    font-size: ($size * 2.5 / 2) * 1px;
+  }
+  [data-dpr="2.75"] & {
+    font-size: ($size * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    font-size: ($size * 3 / 2) * 1px;
+  }
+  [data-dpr="4"] & {
+    font-size: ($size * 4 / 2) * 1px;
+  }
+}
+
+
+$blue:                    #4182e8 !default;
+$primary:                 #4a07c8 !default;//主色 //ff9933
+$warn-l:                  #4a07c8 !default;//提醒色（低）
+$warn-m:                  #FF8308 !default;//提醒色（中）
+$warn-h:                  #ee0a24 !default;//提醒色（高）4182e8
+$background-color:        #F3F4F5 !default;//主背景色
+$border-color:            #CCC  !default;//通用线条色
+$linear-from:             #fea500  !default;//变色起点
+$linear-to:               #f85034 !default;//变色终点
+
+@mixin background-primary {
+  background: $primary; /* Old browsers *//*
+  background: -moz-linear-gradient(90deg, $linear-from 0%, $linear-to 100%); !* FF3.6-15 *!
+  background: -webkit-linear-gradient(90deg, $linear-from 0%, $linear-to 100%); !* Chrome10-25,Safari5.1-6 *!
+  background: linear-gradient(90deg, $linear-from 0%, $linear-to 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+}
+@mixin btn-background-primary {
+  background: $warn-m; /* Old browsers */
+  background: -moz-linear-gradient(90deg, $linear-from 0%, $linear-to 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(90deg, $linear-from 0%, $linear-to 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(90deg, $linear-from 0%, $linear-to 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin top-line {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1PX;
+  border-top: 1PX solid $border-color;
+  color: $border-color;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+@mixin right-line {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 200%;
+  border-right: 1PX solid $border-color;
+  color: $border-color;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+@mixin bottom-line {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1PX;
+  border-bottom: 1PX solid $border-color;
+  color: $border-color;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+@mixin left-line {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 200%;
+  border-left: 1PX solid $border-color;
+  color: $border-color;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+@mixin box-shadow{
+  box-shadow: 0 8PX 12PX #ebedf0;
+}

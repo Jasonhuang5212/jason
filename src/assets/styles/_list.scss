@@ -1,0 +1,22 @@
+.product-list{
+  position: relative;
+
+  .product-item{
+    position: relative;
+    padding: 8PX;
+    margin: 8PX;
+    background: #fff;
+    border-radius: 8PX;
+    @include box-shadow;
+    .van-image{
+      margin-right: 16PX;
+    }
+    .title{
+      font-size: 16PX;
+      font-weight: 700;
+    }
+    .desc{
+      font-size: 12PX;
+    }
+  }
+}

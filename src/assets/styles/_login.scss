@@ -1,0 +1,20 @@
+
+.login-page{
+  .van-cell.van-field{
+    align-items: center;
+  }
+}
+
+.login-tips {
+  padding: 0.4rem 0;
+  font-size: 0.16rem;
+  color: #999;
+}
+.login-forgot-password {
+  padding: 0.4rem 0;
+  font-size: 0.16rem;
+  text-decoration: underline;
+  a{
+    color: $primary;
+  }
+}
